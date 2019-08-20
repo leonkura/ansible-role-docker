@@ -6,17 +6,17 @@ Super simple Ansible role to install docker (ce)
 Requirements
 ------------
 
--
+None.
 
 Role Variables
 --------------
 
--
+None.
 
 Dependencies
 ------------
 
--
+None.
 
 Example Playbook
 ----------------
