@@ -1,5 +1,6 @@
 galaxy_info:
   author: Leon Kura
+  role_name: Docker
   description: Install Docker (CE)
   company: smartup solutions GmbH
 
