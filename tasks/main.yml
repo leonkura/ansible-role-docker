@@ -1,0 +1,17 @@
+---
+- name: Add the Docker GPG Key
+  apt_key:
+    id: 9DC858229FC7DD38854AE2D88D81803C0EBFCD88
+    url: https://download.docker.com/linux/{{ ansible_distribution | lower }}/gpg
+    state: present
+
+- name: Add the Docker APT Repository
+  apt_repository:
+    repo: deb [arch=amd64] https://download.docker.com/linux/{{ ansible_distribution | lower }} {{ansible_distribution_release}} stable
+    state: present
+
+- name: Install Docker (CE) & Requirements
+  apt:
+    name: ['apt-transport-https', 'ca-certificates', 'curl', 'software-properties-common', 'docker-ce', 'docker-ce-cli', 'containerd.io']
+    update_cache: yes
+    state: present
